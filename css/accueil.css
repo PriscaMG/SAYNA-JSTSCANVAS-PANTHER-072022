@@ -23,7 +23,7 @@
 html {
     position: relative;
     z-index: 1;
-    background-image: url(../Illustrations/All_pages/arrière_plan.png)
+    background-image: url(../Illustrations/All_pages/arrière_plan.png);
   }
   
 body {
@@ -487,15 +487,13 @@ p{
   /* Popup Box après soumission du formulaire (avec un peu de JavaScript)*/
    .popupBox {
     display: none;
-    align-items: center;
     justify-content: center;
     position: absolute;
-    top: 10vh;
-    left: 10vw;
-    height: 80vh;
     width: 80vw;
-    background-color:#3d2da6ef;;
-    margin: 15px;
+    left: -35%;
+    padding: 220px 60px;
+    top: 0%;
+    background-color:#3d2da6a0;;
     border-radius: 38px;
     z-index: 2;
   }
@@ -503,52 +501,6 @@ p{
   .popupBox h2{
     color: white
   }
-
-/*.overlay {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.7);
-    transition: opacity 500ms;
-    visibility: hidden;
-    opacity: 0;
-  }
-  .overlay:target {
-    visibility: visible;
-    opacity: 1;
-  }
-
-  .popup {
-    margin: 70px auto;
-    padding: 20px;
-    background: #FFFFFF;
-    border-radius: 10px;
-    width: 20%;
-    position: relative;
-    transition: all 5s ease-in-out;
-  }
-  
-  .popup .close {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    transition: all 200ms;
-    font-size: 30px;
-    font-weight: bold;
-    text-decoration: none;
-    color: #333;
-  }
-  .popup .close:hover {
-    color: #3D2DA6;
-  }
-  .popup .content {
-    max-height: 30%;
-    overflow: auto;
-    font-size: 20px;
-    color: #3D2DA6;
-  }*/
 
 /*Section Footer*/
 #footer{

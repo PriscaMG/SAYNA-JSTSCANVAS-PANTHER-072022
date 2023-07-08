@@ -43,7 +43,7 @@ class Carousel {
         this.root.setAttribute("tabindex", "0")
         this.root.appendChild(this.container)
         this.element.appendChild(this.root)
-        this.items = children.map(child => {
+        this.items = children.map((child) => {
             let item = this.createDivWithClass("carousel__item")
             item.appendChild(child)
             return item
@@ -168,7 +168,7 @@ class Carousel {
             } else {
                 return
             }
-        } else if (index >= this.items.length || this.items[this.currentItem + this.slidesVisible] === undefined && index > this.currentItem) {
+        } else if (index >= this.items.length || (this.items[this.currentItem + this.slidesVisible] === undefined && index > this.currentItem)) {
             if (this.options.loop) {
                 index = 0
             } else {
@@ -248,17 +248,16 @@ class Carousel {
 
 let onReady = function () {
 
-    new carousel(document.querySelector("#Carousel"), {
-        slidesToScroll: 1, 
-        slidesVisible: 3,
+    new Carousel(document.querySelector("#Carousel"), {
+        slidesToScroll: 2, 
+        slidesVisible: 6,
         loop: false,
         infinite: true,
         pagination: false,
         navigation: true,
     })
-
-}
     onReady()
+}
 
 
 //Message validator popup Box
@@ -299,13 +298,3 @@ myForm.addEventListener("submit", (event) => {
 })
 
 document.addEventListener("click", () => messagePopupBox.style.display = "none")
-
-//Voir plus scroll vers Naissance d'un héros
-/*const voirPlus = document.querySelector(".seeMore")
-const voir = document.querySelector(".plus")
-
-voirPlus.addEventListener("click", () => {
-    voir.scrollIntoView({
-        behavior: "smooth"
-    })
-})*/

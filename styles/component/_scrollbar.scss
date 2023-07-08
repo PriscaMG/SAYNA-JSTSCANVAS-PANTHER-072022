@@ -1,0 +1,51 @@
+@import '../base/_color.scss';
+@import '../base/_typo.scss';
+@import '../base/_global.scss';
+
+.left-border1{
+    border: solid 1.9px $lavender-color;
+    position: fixed;
+    left: 48px;
+    height: 40%;
+    top: 0%;
+    animation: fade-in-scroll 2s ease-in-out forwards;
+}
+
+.left-border2{
+    border: solid 1.9px $lavender-color;
+    position: fixed;
+    left: 27px;
+    height: 63%;
+    top: 0%;
+    animation: fade-in-scroll 2s ease-in-out forwards;
+}
+
+.Social-media{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left : 40px;
+    top: 260px;
+    animation: fade-in-scroll 2s ease-in-out forwards;
+    .social{
+        padding: 10px 0;
+        width: 17px;
+        height: 17px;
+        &:hover{
+            filter: invert(20%) sepia(100%) saturate(0%) hue-rotate(96deg) brightness(105%) contrast(102%);
+        }
+        
+    }
+}
+
+@keyframes fade-in-scroll {
+    0% {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}

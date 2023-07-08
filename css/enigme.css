@@ -179,123 +179,6 @@ p{
     height: 5px;
 }
 
-/* Deuxième Section*/
-.section2{
-    display: flex;
-    margin-left: 200px;
-    animation: fade-in 2s ease-in-out forwards;
-}
-
-h3{
-    color: var(--lavender-color);
-    font-size: 22px;
-    font-weight: 400;
-    letter-spacing: 5px;
-    word-spacing: 5px;
-    line-height: 40px;
-    width: 60%;
-    margin-bottom: 30px;
-    margin-top: -120px;
-    margin-left: 200px;
-    animation: fade-in 2s ease-in-out forwards;
-}
-
-/* Deuxième Section côté gauche*/
-.section2-left p{
-    font-size: 13px;
-    width: 70%;
-    line-height: 20px;
-}
-
-.p-form p{
-    padding-top: 90px;
-}
-
-.section2-left span{
-    font-family:'Wakanda';
-}
-
-.form ::placeholder{
-    color: #9E91B7;
-    font-size: 12px;
-}
-
-.form input[type="Réponse"]{
-    border: 1.5px solid #9E91B7;
-    background-color: transparent;
-    border-radius: 20px;
-    padding-right: 180px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px;
-    margin-bottom: 50px;
-}
-
-/*Pop-up box*/
-.button {
-    width: 20%;
-    border-radius: 20px;
-    border: none;
-    padding: 12px 30px;
-    font-size: 11px;
-    text-decoration: none;
-    font-weight: bold;
-    color: rgba(0, 0, 0, 0.631);
-    background-color: #F2CEF2;
-    letter-spacing: 1px;
-    margin-left: 130px;
-  }
-  .button:hover {
-    box-shadow:#F2CEF2 0 0 20px;
-  }
-
-.overlay {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.372);
-    transition: opacity 500ms;
-    visibility: hidden;
-    opacity: 0;
-  }
-  .overlay:target {
-    visibility: visible;
-    opacity: 1;
-  }
-
-  .popup {
-    margin: 70px auto;
-    padding: 20px;
-    background: #FFFFFF;
-    border-radius: 10px;
-    width: 20%;
-    position: relative;
-    transition: all 5s ease-in-out;
-  }
-  
-  .popup .close {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    transition: all 200ms;
-    font-size: 30px;
-    font-weight: bold;
-    text-decoration: none;
-    color: #333;
-  }
-  .popup .close:hover {
-    color: #3D2DA6;
-  }
-  .popup .content {
-    max-height: 30%;
-    overflow: auto;
-    font-size: 20px;
-    color: #3D2DA6;
-    text-align: center;
-  }
-
 /* Deuxième Section côté droite*/
 .section2-right p{
     text-align: center;
@@ -314,6 +197,247 @@ h3{
     margin-top: -180px;
     margin-left: -90px;
 }
+
+/* SECTION 2 : Section Principale et formulaire */
+
+.section2-left #order {
+    font-family: "beyno";
+    font-size: 25px;
+    text-decoration: underline;
+}
+
+.section2-left span{
+    font-family:'Cantarell';
+}
+
+.section2-left .currentQuestion{
+    width: 150%;
+    font-size: 12px;
+}
+
+#translate {
+    font-family:'Wakanda';
+    font-size: 30px;
+    width: 120%;
+    letter-spacing: 3px;
+    line-height: 40px;
+    margin: 50px 0;
+}
+
+.section2-right-text {
+    text-align: center;
+    margin-top: 25%;
+    margin-left: 45%;
+    width: 80%;
+}
+
+.section2-right-image{
+    margin-left: 42%;
+    margin-top: -10%;
+}
+
+.section2-right-text p{
+    font-size: 13px;
+}
+
+.section2 {
+    display: flex;
+    flex-direction: column;
+    margin: -7% 10% 10vw 15%;
+}
+
+/* Définition d'une grille pour placer les éléments sur les grands écrans*/
+@media screen and (min-width: 850px) {
+    .section2 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: 
+            "title  title art art"
+            "formu  formu art art";
+    }
+
+    .form {
+        margin-top: 50px;
+        margin-right: 20%;
+    }
+
+    .section2-right-text {
+        justify-self: center;
+        align-self: center;
+    }
+
+    .section2-left {
+        grid-area: title;
+    }
+    
+    .form {
+        grid-area: formu;
+    }
+    .section2-right-text {
+        grid-area: art;
+        align-self: center;
+        justify-self: center;
+    }
+}
+
+/* Mettre la traduction de l'alphabet en inline */
+dt, dd {
+    display: inline;
+    font-size: 16px;
+    color: #9E91B7;
+    font-weight: bold;
+}
+
+dd {
+    font-family:'Wakanda';
+    margin-left: 2px;
+    margin-right: 8px;
+}
+
+/* Mise en page à l'intérieur des grilles */
+
+.quizzAnswerForm textarea {
+    color: #9E91B7;
+    font-size: 12px;
+    border-color: var(--mySoftPink);
+    background-color: transparent;
+    padding: 15px 15px;
+    height: 20px;
+    border-radius: 50px;
+    width: 100%;
+    margin: 2% 0 10%;
+}
+
+.quizzAnswerForm textarea::placeholder {
+    color: #9E91B7;
+}
+
+/* Boutons submit du formulaire */
+label{
+    color: #ffffffb7;
+}
+
+.submitButton button {
+    /* width: 174px;
+    height: 54px; trop grand */
+    width: 125px;
+    height: 40px;
+    border: none;
+    border-radius: 38px;
+    background-color: #DF99F2;
+    font-weight: bolder;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.631);
+    cursor: pointer;
+}
+
+.submitButton button:hover {
+    box-shadow:#F2CEF2 0 0 20px; ;
+}
+
+.submitButton {
+    display: flex;
+    justify-content: center;
+}
+
+/**Bouton retour à l'accueil à la fin du quizz */
+#back {
+    display: none;
+}
+
+/* Popup Box après soumission du formulaire (avec un peu de JavaScript)*/
+#ResponsePopupBox {
+    height: 100% ;
+    width: 100%;
+    display: none;
+    position: fixed;
+    top:0;
+    left: 0;
+    color: white;
+    z-index: 3;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ResponsePopupBox {
+    height: 100% ;
+    width: 100%;
+    position: fixed;
+    top:0;
+    left: 0%;
+    filter:blur(58px);
+    background : linear-gradient(#3D2DA6ee, #021740ee ) ;
+    display: none;
+    z-index: 2;
+  }
+
+  .PopupBox-content {
+    height: 70% ;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10%;
+    background: linear-gradient(#9E91B7, #3D2DA600);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 3.45 3.45 #000000;
+    border-radius: 20px;
+    filter:none;
+  }
+
+  .win {
+    color: white;
+    font-family: Cantarell;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .winText {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .nextQuestion, #back {
+    width: 174px;
+    max-width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 38px;
+    background-color: var(--mySoftPink);
+    font-weight: bolder;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+
+  #back {
+    display: none;
+  }
+
+  .comingFigCompte {
+    display: none;
+  }
+
+  .comingFigCompte * {
+    margin: 0 5px;
+    font-weight: bold;
+  }
+
+  .comingFigCompte h2 {
+    font-family: Cantarell;
+    color: white;
+    text-transform: uppercase;
+  }
+
+  .countDownBox {
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  .countDownBox div {
+    display: inline;
+    font-size:25px ;
+  }
 
 /*Section Footer*/
 #footer{

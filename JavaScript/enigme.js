@@ -17,23 +17,23 @@ const qTab = [
 
 /**Selecteurs */
 const quizzAnswerForm = document.querySelector(".quizzAnswerForm")
-const submitAnswer = document.querySelector("#EnigSubmitBtnForm")
-const resultPopupBox = document.querySelector("#EnigPopupBox__mainContainer")
-const enigPopupBox__blur = document.querySelector(".EnigPopupBox__mainContainer")
+const submitAnswer = document.querySelector("#quizzSubmitButton")
+const resultPopupBox = document.querySelector("#ResponsepopupBox")
+const enigPopupBox__blur = document.querySelector(".ResponsepopupBox")
 const userAnswer = document.querySelector("#reponse")
 let enigmeAnswer = "SI JE SUIS FIDELE C'EST A CE TRONE PEU IMPORTE QUI MONTE DESSUS"
-const congrat = document.querySelector(".congrat")
-const resultComment = document.querySelector(".resultComment")
+const congrat = document.querySelector(".win")
+const resultComment = document.querySelector(".winText")
 
-const nextQ = document.querySelector(".nextQ")
+const nextQ = document.querySelector(".nextQuestion")
 const comingFigCompte = document.querySelector(".comingFigCompte")
 
-const q1h2 = document.querySelector("#sec2En__title__forTrans")
-const q1dl = document.querySelector(".q1dl")
+const q1h2 = document.querySelector("#translate")
+const q1dl = document.querySelector(".alphabet")
 
 
-const qCurrentNumber = document.querySelector(".sec2En_currentDefNumber")
-const currentQuestionSentence = document.querySelector(".currentQuestionSentence")
+const qCurrentNumber = document.querySelector(".currentOrder")
+const currentQuestionSentence = document.querySelector(".currentQuestion")
 const currentIndice = document.querySelector(".currentIndice")
 const doYouKnow = document.querySelector(".doYouKnow")
 
@@ -91,14 +91,14 @@ document.addEventListener("click",() => {
 
 
 /**Revenir à la page principale à la fin du Quizz */
-const enigGoIndex = document.querySelector("#enigGoIndex")
+const enigGoIndex = document.querySelector("#back")
 enigGoIndex.addEventListener("click",() => {
     indexPage.click()
 } )
 
 /**Compte à rebour à la fin du quizz */
 function reboursF() {
-    const rebours = document.querySelector(".box-rebours")
+    const rebours = document.querySelector(".countDownBox")
     const jour = document.querySelector("#jour")
     const heure = document.querySelector("#heure")
     const minute = document.querySelector("#minute")

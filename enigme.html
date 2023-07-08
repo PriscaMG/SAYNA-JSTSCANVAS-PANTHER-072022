@@ -5,9 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panther DCLIC | Enigme</title>
-    <link rel="stylesheet" href="./style/enigme.css">
+    <link rel="stylesheet" href="./styles/main.css">
+    <script src="./JavaScript/enigme.js" defer></script>
+    <script src="./JavaScript/main.js" defer></script>
 </head>
 <body>
+
+    <!-- Personalized mouse pointer -->
+    <div>
+        <img id="mouseImg" src="./Illustrations/All_pages/logo_souris_BP1_blanc.png" alt="">
+    </div>
 
     <header>
         <nav class="Header">
@@ -22,8 +29,18 @@
         </nav>
     </header>
 
+        <!--Réseaux sociaux SCROLLABLE-->
+<div class="left-border1"></div>
+<div class="left-border2"></div>
+<div class="Social-media" style="position : fixed;">
+    <a href="http://www.marvel-cineverse.fr/pages/mcu/encyclopedie/personnages/black-panther.html"><img class="social" src="./Illustrations/All_pages/icon_facebook.png" alt=""></a>
+    <a href="http://www.marvel-cineverse.fr/pages/mcu/encyclopedie/personnages/black-panther.html"><img class="social" src="./Illustrations/All_pages/icon_instagram.png" alt=""></a>
+    <a href="http://www.marvel-cineverse.fr/pages/mcu/encyclopedie/personnages/black-panther.html"><img class="social" src="./Illustrations/All_pages/icon_twitter.png" alt=""></a>
+    <a href="http://www.marvel-cineverse.fr/pages/mcu/encyclopedie/personnages/black-panther.html"><img class="social" src="./Illustrations/All_pages/icon_tiktok.png" alt=""></a>
+</div>
+
     <!--Première section-->
-<div class="section1"> 
+<div class="section1Enigme"> 
     <div class="section1-right">
     <h2>Releve le defi <br>
         <span>des dora milaje</span></h2>
@@ -39,53 +56,103 @@
 </div>
 
     <!--Deuxième section-->
-    <h3>“ SI JE SUIS FIDELE C’EST A CE TRONE <br>
-        PEU IMPORTE QUI MONTE DESSUS ”</h3>
-<div class="section2">
+<section class="section2Enigme">
     <!--Deuxième section côté gauche-->
     <div class="section2-left">
-    <p>Voici la transicription de l’alphabet :</p>
-    <p>A = <span>A</span> ; B = <span>B</span> ; C = <span>C</span> ; D = <span>D</span> ; E = <span>E</span> ; F = <span>F</span> ; G = <span>G</span> ; H = <span>H</span> ; I = <span>I</span> ; J = <span>J</span> ; 
+        <h2 id="order">ENIGME NUMERO <span class="currentOrder">1</span> </h2>
+        <p class="currentQuestion">Prouve ton talent d’espion et déchiffre cette réplique d’Okoyé écrite
+            en Wakandais, et apprend par la même occasion la première valeur d’une Dora Milaje !</p>
 
-        K = <span>K</span> ; L = <span>L</span> ; M = <span>M</span> ; N = <span>N</span> ; O = <span>O</span> ; P = <span>P</span> ; Q = <span>Q</span> ; R = <span>R</span> ; S = <span>S</span> ; T = <span>T</span> ;
-        
-        U = <span>U</span> ; V = <span>V</span> ; W = <span>W</span> ; X = <span>X</span> ; Y = <span>Y</span> ; Z = <span>Z</span>
-    </p>
+        <p class="currentIndice"></p>
 
-    <div class="p-form">
-    <p>Alors, as tu la réponse ?</p>
+        <h2 id="translate"> "SI JE SUIS FIDELE C'EST A CE TRONE PEU IMPORTE QUI MONTE DESSUS"</h2>
+    
+        <div class="form">
+            <form action="" class="quizzAnswerForm">
+                <div>
+                    <label for="reponse">
+                      Alors, as tu la réponse ?
+                    </label> <br>
+                    <textarea class="Answer" name="Réponse" id="reponse" cols="30" rows="1"
+                      placeholder="Réponse"></textarea>
+                </div>
+
+                <div class="submitButton">
+                    <button type="submit" id="quizzSubmitButton">ENVOYER</button>
+                </div>
+            </form>
+        </div>
     </div>
-    <form action="" class="form">
-    <div>
-        <label for="Réponse"></label>
-        <input type="Réponse" name="Réponse" placeholder="Réponse">
-    </div>
-    <div>
-        <a class="button" href="#popup1">ENVOYER</a>
 
-        <div id="popup1" class="overlay">
-            <div class="popup">
-                <a class="close" href="#">&times;</a>
-                <div class="content">
-                    Réponse envoyé !
+     <!--Confirmation message popupbox-->
+        <div class="ResponsePopupBox">
+            <!--Blured background-->
+        </div>
+    
+        <div class="alert" id="ResponsePopupBox">
+            <div class="PopupBox-content">
+                <h2 class="win">Bravo !</h2>
+                <p class="winText">
+                    Tu as trouvé la réponse. Es tu prêt pour l'énigme suivante ?
+                </p>
+                <div>
+                    <button class="nextQuestion">Question suivante</button>
+                    <button type="submit" id="back">REVENIR A L'ACCUEIL</button>
+                </div>
+                <div class="comingFigCompte">
+                    <div class="figmaLog">
+                       <img src="Assets\Illustrations_Logo\Enigme\figma_logo.svg" alt="">
+                    </div>
+                    <div class="countDown">
+                        <h2>Coming soon...</h2>
+                        <div class="countDownBox">
+                           <div id="jour">00</div>:<div id="heure">00</div>:<div id="minute">00</div>:<div id="seconde">00</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    </form>
-    </div>
 
     <!--Deuxième section côté droite-->
     <div class="section2-right">
-    <div class="section2-right-text">
-    <p>Le savais tu ?</p>
-    <p>Plusieurs sources s’entendent pour dire que la lettre la plus utilisée en français est 
-        la lettre E. En pourcentage de fréquence, la lettre est utilisée à 14% dans une 
-        phrase. Et si tu regardais quel symbole revient le plus souvent ? </p>
+        <div class="section2-right-text">
+            <p>Le savais tu ?</p>
+            <p class="doYouKnow">
+                Voici la transcription de l’alphabet :
+            </p>
+            <dl class="alphabet">
+                    <dt>A =</dt> <dd>A ;</dd>
+                    <dt>B =</dt> <dd>B ;</dd>
+                    <dt>C = </dt> <dd>C ;</dd>
+                    <dt>D = </dt> <dd>D ;</dd>
+                    <dt>E = </dt> <dd>E ;</dd>
+                    <dt>F = </dt> <dd>F ;</dd>
+                    <dt>G = </dt> <dd>G ;</dd>
+                    <dt>H = </dt> <dd>H ;</dd>
+                    <dt>I = </dt> <dd>I ;</dd>
+                    <dt>J = </dt> <dd>J ;</dd>
+                    <dt>K = </dt> <dd>K ;</dd>
+                    <dt>L = </dt> <dd>L ;</dd>
+                    <dt>M = </dt> <dd>M ;</dd>
+                    <dt>N = </dt> <dd>N ;</dd>
+                    <dt>O = </dt> <dd>O ;</dd>
+                    <dt>P = </dt> <dd>P ;</dd>
+                    <dt>Q = </dt> <dd>Q ;</dd>
+                    <dt>R = </dt> <dd>R ;</dd>
+                    <dt>S = </dt> <dd>S ;</dd>
+                    <dt>T = </dt> <dd>T ;</dd>
+                    <dt>U = </dt> <dd>U ;</dd> 
+                    <dt>X = </dt> <dd>X ;</dd>
+                    <dt>Y = </dt> <dd>Y ;</dd>
+                    <dt>Z = </dt> <dd>Z ;</dd>
+            </dl>
+        </div>
+        <div class="section2-right-image">
+            <img src="./Illustrations/Enigme/Pantherenigme2.png" alt="">
+        </div>
     </div>
-    <img src="./Illustrations/Enigme/Pantherenigme2.png" alt="">
-    </div>
-</div>
+</section>
+
 
     <!--Footer-->
     <Footer id="footer">
@@ -117,7 +184,7 @@
         </div>
     </div>
     <div class="footer2">
-        <p>2022 Tous droits réservés</p> 
+        <p>2023 Tous droits réservés</p> 
         <ul class="footer2-list">
            <li><a href="#">Politique de confidentialité</a></li>
            <li><a href="#">Conditions d’utilisation</a></li>

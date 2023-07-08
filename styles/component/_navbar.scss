@@ -1,0 +1,47 @@
+@import '../base/_color.scss';
+@import '../base/_typo.scss';
+@import '../base/_global.scss';
+
+.Header{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+    .Logo{
+        margin-top: 20px;
+        width: 70%;
+        height: 45%;
+        &:hover{
+            filter: invert(10%) sepia(78%) saturate(5771%) hue-rotate(251deg) brightness(87%) contrast(87%);
+        }
+    }
+    .Header-menu{
+        display: flex;
+        list-style-type: none;
+        li a{
+            padding-left: 60px;
+            font-family:'beyno';
+            font-size: 14px;
+            text-decoration: none;
+            color: $white-color;
+            &:hover{
+                text-decoration: underline;
+            }
+            &.active{
+                color: $lavender-color;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+@keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+}
