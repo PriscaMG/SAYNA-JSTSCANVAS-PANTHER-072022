@@ -179,9 +179,16 @@ p{
 }
 
 /* Deuxième section */
-/*CAROUSEL*/
+/**Design en général de la partie carousel*/
+.section2{
+    display: inline-flex;
+    background-color: #021740;
+    margin-left: 25%;
+    height: 230px;
+    animation: fade-in 5s ease-in-out forwards;
+}
+
 #Carousel{
-    background-color: var(--myDarkBlue);
     box-shadow: 0 15px #3232321a, 0 5px 15px #0000001a;
     transition: transform 0.3s;
     transform: translate3d(0, -2px, 0);
@@ -192,26 +199,32 @@ p{
 }
 
 .item{
+    position: relative;
     display: flex;
+    margin-left: 1.4%;
 }
 
-.section2{
-    display: inline-flex;
-    background-color: #021740;
-    margin-left: 100px;
-    height: 230px;
-    animation: fade-in 2s ease-in-out forwards;
+.section2 .image {
+    width: 50%;
 }
 
 .section2 .image img{
     width: 200px;
     height: 230px;
-    object-fit: cover;
-    margin-left: 20px;
+    padding-top: 6px;
 }
 
 .section2 .image img:hover{
     transform: scale(1.4);
+}
+
+.section2-text{
+    padding: 20px 40px;
+    width: 40%;
+}
+
+.section2-text:hover{
+    transform: scale(1.2);
 }
 
 .section2 a{
@@ -224,42 +237,60 @@ p{
     color: #9e91b7e7;
 }
 
-.section2 p{
-    width: 90%;
+.section2-text p{
+    width: 150%;
     text-align: justify;
+    word-spacing: -1px;
+    font-size: 9px;
 }
 
-.section2-text{
-    padding-left: 32px;
-    padding-top: 20px;
+/**DESIGN CAROUSEL COTE JS*/
+.carousel {
+    position: relative;
+    overflow: hidden;
 }
 
-.section2-text:hover{
-    transform: scale(1.2);
+.carousel__container {
+    transition: transform 0.3s;
+    transform: translate3d(0, 0, 0);
+    display: flex;
 }
-/*.icon{
+
+.carousel__container::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.carousel__next {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: url(../Illustrations/Accueil/iconflèche.png) center center no-repeat;
+    background-size: 20px 20px;
+    border-radius: 50%;
+    top: 50%;
+    margin-top: -20px;
+    box-shadow: 0 0 20px white;
+    cursor: pointer;
+    right: 5px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+/*.carousel__next {
     width: 50px;
     height: 50px;
     position: absolute;
-    right: 30px;
-    top: 750px;
+    left: 27%;
+    top: 1000px;
+    background-size: 20px 20px;
+    border-radius: 50%;
+    top: 50%;
+    margin-top: -20px;
+    box-shadow: 0 0 20px white;
+    cursor: pointer;
+    transition: transform 0.3s, opacity 0.3s;
+    background: url(../Illustrations/Accueil/iconflèche.png) center center no-repeat;
 }*/
-
-/*DESIGN CAROUSEL COTE JS*/
-.carousel__next {
-        position: absolute;
-        width: 30px;
-        height: 30px;
-        background-image : url(./Illustrations/Accueil/iconflèche.png) center center no-repeat;
-        background-size: 20px 20px;
-        border-radius: 50%;
-        top: 50%;
-        margin-top: -20px;
-        box-shadow: 0 0 20px white;
-        cursor: pointer;
-        right: 5px;
-        transition: transform 0.3s, opacity 0.3s
-   }
 
 .carousel__next:hover{
     transform: scale(1.2)
@@ -267,6 +298,38 @@ p{
 
 .carousel__next--hidden {
     opacity: 0
+}
+
+.carousel__pagination {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    display: none;
+}
+
+.carousel__pagination__button {
+    background-color: #fff;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 3px;
+    box-shadow: 0 2px #3232321a;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.carousel__pagination__button--active,
+.carousel__pagination__button:hover {
+    transform: scale(1.4);
+}
+
+@media screen and (min-width: 800px) {
+    .carousel__pagination {
+        display: block;
+    }
 }
 
 /* Troisième section */
@@ -348,7 +411,7 @@ p{
 
 /* Quatrième section */
 .section4{
-    background-image: url(../Illustrations/All_pages/back_footer.png);
+    background-image: url(../Illustrations/Accueil/Pantherhome7.png);
     background-repeat: no-repeat;
     background-size: cover;
     height: 700px;
@@ -405,7 +468,7 @@ p{
 }
 
 /*Pop-up box*/
-.button {
+.submit {
     width: 20%;
     border-radius: 20px;
     border: none;
@@ -417,11 +480,31 @@ p{
     background-color: #F2CEF2;
     letter-spacing: 1px;
   }
-  .button:hover {
+  .submit:hover {
     box-shadow:#021740 0 0 20px;
   }
 
-.overlay {
+  /* Popup Box après soumission du formulaire (avec un peu de JavaScript)*/
+   .popupBox {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 10vh;
+    left: 10vw;
+    height: 80vh;
+    width: 80vw;
+    background-color:#3d2da6ef;;
+    margin: 15px;
+    border-radius: 38px;
+    z-index: 2;
+  }
+
+  .popupBox h2{
+    color: white
+  }
+
+/*.overlay {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -465,11 +548,11 @@ p{
     overflow: auto;
     font-size: 20px;
     color: #3D2DA6;
-  }
+  }*/
 
 /*Section Footer*/
 #footer{
-    background-image: url(../Illustrations/All-pages/back_footer.png);
+    background-image: url(../Illustrations/All_pages/back_footer.png);
     margin-top: 100px;
     height: 550px;
 }

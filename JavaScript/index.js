@@ -1,4 +1,3 @@
-
 //CAROUSEL
 class Carousel {
 
@@ -249,7 +248,7 @@ class Carousel {
 
 let onReady = function () {
 
-    new Carousel(document.querySelector("#sec2Carousel"), {
+    new carousel(document.querySelector("#Carousel"), {
         slidesToScroll: 1, 
         slidesVisible: 3,
         loop: false,
@@ -263,14 +262,14 @@ let onReady = function () {
 
 
 //Message validator popup Box
-const myForm = document.querySelector(".sec4FormSec__form")
-const userName = document.querySelector("#userName")
+const myForm = document.querySelector(".form")
+const userName = document.querySelector("#name")
 const noName = document.querySelector(".noName")
-const userMail = document.querySelector("#userMail")
-const invalidMail = document.querySelector(".invalidMail")
-const mainMessage = document.querySelector("#mainMessage")
-const warningMessage = document.querySelector(".warningMessage")
-const messagePopupBox = document.querySelector(".messagePopupBox")
+const userMail = document.querySelector("#mail")
+const invalidMail = document.querySelector(".noMail")
+const mainMessage = document.querySelector("#message")
+const warningMessage = document.querySelector(".noMessage")
+const messagePopupBox = document.querySelector(".popupBox")
 
 myForm.addEventListener("submit", (event) => {
     event.preventDefault()
@@ -302,11 +301,11 @@ myForm.addEventListener("submit", (event) => {
 document.addEventListener("click", () => messagePopupBox.style.display = "none")
 
 //Voir plus scroll vers Naissance d'un héros
-const voirPlus = document.querySelector(".seeMore")
+/*const voirPlus = document.querySelector(".seeMore")
 const voir = document.querySelector(".plus")
 
 voirPlus.addEventListener("click", () => {
     voir.scrollIntoView({
         behavior: "smooth"
     })
-})
+})*/

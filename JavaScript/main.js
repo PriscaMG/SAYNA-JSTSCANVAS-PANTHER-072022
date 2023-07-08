@@ -1,6 +1,5 @@
-
 //CAROUSEL
-class Carousel {
+//class Carousel {
 
     /**
      * This callback type is called "requestCallback" and is displayed as a global symbol.
