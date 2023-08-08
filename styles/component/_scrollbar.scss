@@ -49,3 +49,64 @@
       transform: translateY(0);
     }
 }
+
+/* Code général pour .left-border1 et .left-border2 */
+.left-border1
+.left-border2 {
+    border: solid 1.9px $lavender-color;
+    position: fixed;
+    animation: fade-in-scroll 2s ease-in-out forwards;
+}
+
+/* Code spécifique pour les smartphones */
+@media screen and (max-width: 767px) {
+    .left-border1
+    .left-border2 {
+        left: 60px;
+    }
+
+    .left-border1 {
+        height: 10%;
+    }
+
+    .left-border2 {
+        height: 16%;
+    }
+
+    .Social-media {
+        left: 42px;
+        top: 220px;
+
+        .social {
+            width: 15px;
+            height: 15px;
+        }
+    }
+}
+
+/* Code spécifique pour les tablettes */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .left-border1 
+    .left-border2 {
+        left: 80px;
+    }
+
+    .left-border1 {
+        height: 14%;
+    }
+
+    .left-border2 {
+        height: 20%;
+    }
+
+    .Social-media {
+        left: 57px;
+        top: 270px;
+
+        .social {
+            width: 15px;
+            height: 15px;
+        }
+    }
+}
+

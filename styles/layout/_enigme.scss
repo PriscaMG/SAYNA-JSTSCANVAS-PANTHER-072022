@@ -7,12 +7,10 @@
     display: flex;
     animation: fade-in 2s ease-in-out forwards;
     background-image: url(../Illustrations/Enigme/Pantherenigme1.png);
-    image-rendering: auto;
-    height: 900px;
-    width: 830px;
-    background-size: cover;
-    background-position-x: -50px;
-    background-position-y: -180px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 60%;
+    height: 70%;
     .section1-right {
         h2{
             font-size: 45px;

@@ -318,7 +318,7 @@ p {
 
 /* Quatrième section */
 .section4Accueil {
-  background-image: url(../Illustrations/Accueil/Pantherhome7.png);
+  background-image: url(Illustrations/Accueil/Pantherhome7.png);
   background-repeat: no-repeat;
   background-size: cover;
   height: 700px;
@@ -399,6 +399,310 @@ p {
   color: #FFFFFF;
 }
 
+/* Code général pour les sections */
+.section1Accueil {
+  display: flex;
+  margin-left: 150px;
+  /* Autres propriétés CSS */
+}
+@media screen and (max-width: 767px) {
+  .section1Accueil {
+    /* Code spécifique pour les smartphones */
+    flex-direction: column;
+    margin: center;
+  }
+  .section1Accueil .section1-text {
+    width: 100%;
+    margin-top: 40px;
+  }
+  .section1Accueil img {
+    width: 100%;
+    height: auto;
+    margin-top: 18px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .section1Accueil {
+    /* Code spécifique pour les tablettes */
+    flex-direction: column;
+    margin-left: 0;
+  }
+  .section1Accueil .section1-text {
+    width: 80%;
+    margin-top: 100px;
+  }
+  .section1Accueil img {
+    width: 80%;
+    height: auto;
+    margin-top: 18px;
+  }
+}
+
+/* Code général pour la conteneur .section2Accueil */
+.section2Accueil {
+  display: inline-flex;
+  background-color: #021740;
+  margin-left: 25%;
+  height: 230px;
+  animation: fade-in 5s ease-in-out forwards;
+  /* Code spécifique pour les smartphones */
+  /* Code spécifique pour les tablettes */
+}
+@media screen and (max-width: 767px) {
+  .section2Accueil {
+    flex-direction: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+    height: auto;
+    padding: 20px;
+    background-color: #021740;
+  }
+  .section2Accueil #Carousel {
+    width: 100%;
+    flex-direction: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
+  .section2Accueil .item {
+    display: block;
+    margin-left: 0;
+    text-align: center;
+    padding-bottom: 30px;
+  }
+  .section2Accueil .image img {
+    width: 150px;
+    height: 170px;
+  }
+  .section2Accueil .section2-text {
+    padding: 10px;
+    width: 100%;
+  }
+  .section2Accueil .section2-text h2 {
+    font-size: 14px;
+  }
+  .section2Accueil .section2-text p {
+    width: 100%;
+    font-size: 8px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .section2Accueil .section2-text {
+    width: 30%;
+  }
+  .section2Accueil .section2-text h2 {
+    font-size: 15px;
+  }
+  .section2Accueil .section2-text p {
+    width: 100%;
+    font-size: 9px;
+  }
+}
+
+/* Code général pour la conteneur .section3Accueil */
+.section3Accueil {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 120px;
+  animation: fade-in 2s ease-in-out forwards;
+  /* Code spécifique pour les smartphones */
+  /* Code spécifique pour les tablettes */
+}
+@media screen and (max-width: 767px) {
+  .section3Accueil {
+    flex-direction: column;
+    align-items: center;
+  }
+  .section3Accueil .section3-left,
+  .section3Accueil .section3-right {
+    margin-left: 100px;
+    margin-right: 0;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .section3Accueil .section3-left {
+    margin-left: 50px;
+  }
+  .section3Accueil .section3-right {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+/* Code spécifique pour les smartphones */
+@media screen and (max-width: 767px) {
+  .section3-left {
+    margin-left: 0;
+  }
+  .section3-left h2 {
+    font-size: 16px;
+  }
+  .section3-left p {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .section3-right {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .section3-right .image-BP {
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+  }
+  .section3-right .section3-biographie {
+    width: 80%;
+    height: auto;
+    padding-top: 100px;
+    margin-top: -80px;
+  }
+  .section3-right h2 {
+    font-size: 18px;
+  }
+  .section3-right .section3-items ul li,
+  .section3-right .section3-list ul li {
+    font-size: 8px;
+  }
+}
+/* Code spécifique pour les tablettes */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .section3-left {
+    margin-left: 50px;
+  }
+  .section3-left h2 {
+    font-size: 16px;
+  }
+  .section3-left p {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .section3-right {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .section3-right .image-BP {
+    width: 60%;
+    height: auto;
+    margin-left: 30px;
+  }
+  .section3-right .section3-biographie {
+    width: 60%;
+    height: auto;
+    padding-top: 100px;
+    margin-top: -80px;
+  }
+  .section3-right h2 {
+    font-size: 18px;
+  }
+  .section3-right .section3-items ul li,
+  .section3-right .section3-list ul li {
+    font-size: 10px;
+  }
+}
+/* Code général pour la conteneur .section4Accueil */
+.section4Accueil {
+  background-image: url(Illustrations/Accueil/Pantherhome7.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 700px;
+  /* Code spécifique pour les smartphones */
+  /* Code spécifique pour les tablettes */
+}
+@media screen and (max-width: 767px) {
+  .section4Accueil {
+    height: auto;
+  }
+  .section4Accueil .form {
+    width: 90%;
+    max-width: 400px;
+    margin: 100px auto;
+    border-radius: 40px;
+    padding: 20px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .section4Accueil {
+    height: 600px;
+  }
+  .section4Accueil .form {
+    width: 80%;
+    max-width: 600px;
+    margin: 100px auto;
+    border-radius: 50px;
+    padding: 30px;
+  }
+}
+
+/* Code spécifique pour les smartphones */
+@media screen and (max-width: 767px) {
+  .form {
+    height: auto;
+    padding-top: 5%;
+  }
+  .form p {
+    font-size: 10px;
+  }
+  .form span {
+    font-size: 24px;
+  }
+  .form .Label input[type=nom],
+  .form .Label input[type=Email],
+  .form .Label input[type=Message] {
+    padding-right: 100px;
+    padding-left: 5px;
+  }
+  .form .Label input[type=Message] {
+    padding-bottom: 80px;
+  }
+  .form *::-moz-placeholder {
+    font-size: 10px;
+  }
+  .form *::placeholder {
+    font-size: 10px;
+  }
+  .form .submit {
+    width: 40%;
+    padding: 8px 20px;
+    font-size: 10px;
+    border-radius: 15px;
+  }
+}
+/* Code spécifique pour les tablettes */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .form {
+    height: 520px;
+    padding-top: 2%;
+  }
+  .form p {
+    font-size: 11px;
+  }
+  .form span {
+    font-size: 26px;
+  }
+  .form .Label input[type=nom],
+  .form .Label input[type=Email],
+  .form .Label input[type=Message] {
+    padding-right: 150px;
+    padding-left: 20px;
+  }
+  .form .Label input[type=Message] {
+    padding-bottom: 100px;
+  }
+  .form *::-moz-placeholder {
+    font-size: 11px;
+  }
+  .form *::placeholder {
+    font-size: 11px;
+  }
+  .form .submit {
+    width: 30%;
+    padding: 10px 25px;
+    font-size: 12px;
+    border-radius: 18px;
+  }
+}
 @font-face {
   font-family: "Panthera";
   src: url(../police/PantheraRegular-MVZ9J.ttf);
@@ -653,12 +957,10 @@ p {
   display: flex;
   animation: fade-in 2s ease-in-out forwards;
   background-image: url(../Illustrations/Enigme/Pantherenigme1.png);
-  image-rendering: auto;
-  height: 900px;
-  width: 830px;
-  background-size: cover;
-  background-position-x: -50px;
-  background-position-y: -180px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 60%;
+  height: 70%;
 }
 .section1Enigme .section1-right h2 {
   font-size: 45px;
@@ -1013,6 +1315,43 @@ p {
     transform: translateX(0);
   }
 }
+/* Code général pour .Header */
+.Header {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+  /* Code spécifique pour les smartphones */
+  /* Code spécifique pour les tablettes */
+}
+@media screen and (max-width: 767px) {
+  .Header {
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+  }
+  .Header .Logo {
+    width: 50%;
+    height: auto;
+    margin-top: 10px;
+  }
+  .Header .Header-menu {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+  .Header .Header-menu li a {
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 5px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .Header .Header-menu li a {
+    padding-left: 30px;
+  }
+}
+
 @font-face {
   font-family: "Panthera";
   src: url(../police/PantheraRegular-MVZ9J.ttf);
@@ -1212,6 +1551,99 @@ p {
   text-decoration: underline;
 }
 
+/* Code général pour la conteneur #footer */
+#footer {
+  background-image: url(../Illustrations/All_pages/back_footer.png);
+  margin-top: 100px;
+  height: 550px;
+  /* Code spécifique pour les smartphones */
+  /* Code spécifique pour les tablettes */
+}
+@media screen and (max-width: 767px) {
+  #footer {
+    height: auto;
+    padding: 20px;
+  }
+  #footer .marvel {
+    margin: 0 auto;
+    display: block;
+    animation: none;
+    filter: none;
+    margin-top: 30px;
+  }
+  #footer .footer1 {
+    flex-direction: column;
+  }
+  #footer .footer1 .footer-logo {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  #footer .footer1 .footer-logo img {
+    width: 200px;
+    height: auto;
+    margin-top: 20px;
+  }
+  #footer .footer1 .footer-pages {
+    margin-top: 30px;
+    margin-left: 0;
+  }
+  #footer .footer1 .footer-pages h4 {
+    font-size: 14px;
+    margin-left: 0;
+  }
+  #footer .footer1 .footer-pages ul li {
+    margin-bottom: 10px;
+  }
+  #footer .footer1 .footer-social-media {
+    margin-top: 30px;
+    margin-left: 0;
+  }
+  #footer .footer1 .footer-social-media h4 {
+    font-size: 14px;
+    margin-left: 0;
+  }
+  #footer .footer1 .footer-social-media ul li {
+    margin-bottom: 10px;
+  }
+  #footer .footer2 {
+    flex-direction: column;
+    margin-left: 0;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  #footer .footer2 p {
+    font-size: 11px;
+    padding-top: 2px;
+  }
+  #footer .footer2 .footer2-list {
+    margin-left: 0;
+  }
+  #footer .footer2 .footer2-list a {
+    padding-right: 10px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #footer {
+    height: 500px;
+    padding: 30px;
+  }
+  #footer .footer1 .footer-logo img {
+    width: 230px;
+  }
+  #footer .footer1 .footer-pages h4 {
+    font-size: 15px;
+  }
+  #footer .footer1 .footer-social-media h4 {
+    font-size: 15px;
+  }
+  #footer .footer2 p {
+    font-size: 12px;
+  }
+  #footer .footer2 .footer2-list a {
+    font-size: 12px;
+  }
+}
+
 @font-face {
   font-family: "Panthera";
   src: url(../police/PantheraRegular-MVZ9J.ttf);
@@ -1339,6 +1771,53 @@ p {
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+/* Code général pour .left-border1 et .left-border2 */
+.left-border1 .left-border2 {
+  border: solid 1.9px #9E91B7;
+  position: fixed;
+  animation: fade-in-scroll 2s ease-in-out forwards;
+}
+
+/* Code spécifique pour les smartphones */
+@media screen and (max-width: 767px) {
+  .left-border1 .left-border2 {
+    left: 60px;
+  }
+  .left-border1 {
+    height: 10%;
+  }
+  .left-border2 {
+    height: 16%;
+  }
+  .Social-media {
+    left: 42px;
+    top: 220px;
+  }
+  .Social-media .social {
+    width: 15px;
+    height: 15px;
+  }
+}
+/* Code spécifique pour les tablettes */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .left-border1 .left-border2 {
+    left: 80px;
+  }
+  .left-border1 {
+    height: 14%;
+  }
+  .left-border2 {
+    height: 20%;
+  }
+  .Social-media {
+    left: 57px;
+    top: 270px;
+  }
+  .Social-media .social {
+    width: 15px;
+    height: 15px;
   }
 }
 @font-face {

@@ -118,3 +118,123 @@
         }
     }
 }
+
+/* Code général pour la conteneur #footer */
+#footer {
+    background-image: url(../Illustrations/All_pages/back_footer.png);
+    margin-top: 100px;
+    height: 550px;
+
+    /* Code spécifique pour les smartphones */
+    @media screen and (max-width: 767px) {
+        height: auto;
+        padding: 20px;
+
+        .marvel {
+            margin: 0 auto;
+            display: block;
+            animation: none;
+            filter: none;
+            margin-top: 30px;
+        }
+
+        .footer1 {
+            flex-direction: column;
+
+            .footer-logo {
+                margin-left: 0;
+                margin-right: 0;
+                img {
+                    width: 200px;
+                    height: auto;
+                    margin-top: 20px;
+                }
+            }
+
+            .footer-pages {
+                margin-top: 30px;
+                margin-left: 0;
+
+                h4 {
+                    font-size: 14px;
+                    margin-left: 0;
+                }
+
+                ul li {
+                    margin-bottom: 10px;
+                }
+            }
+
+            .footer-social-media {
+                margin-top: 30px;
+                margin-left: 0;
+
+                h4 {
+                    font-size: 14px;
+                    margin-left: 0;
+                }
+
+                ul li {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+
+        .footer2 {
+            flex-direction: column;
+            margin-left: 0;
+            margin-top: 20px;
+            margin-bottom: 30px;
+            p {
+                font-size: 11px;
+                padding-top: 2px;
+            }
+
+            .footer2-list {
+                margin-left: 0;
+
+                a {
+                    padding-right: 10px;
+                }
+            }
+        }
+    }
+
+    /* Code spécifique pour les tablettes */
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        height: 500px;
+        padding: 30px;
+
+        .footer1 {
+            .footer-logo {
+                img {
+                    width: 230px;
+                }
+            }
+
+            .footer-pages {
+                h4 {
+                    font-size: 15px;
+                }
+            }
+
+            .footer-social-media {
+                h4 {
+                    font-size: 15px;
+                }
+            }
+        }
+
+        .footer2 {
+            p {
+                font-size: 12px;
+            }
+
+            .footer2-list {
+                a {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
