@@ -59,23 +59,22 @@
 }
 
 /* Code spécifique pour les smartphones */
-@media screen and (max-width: 767px) {
-    .left-border1
-    .left-border2 {
-        left: 60px;
-    }
-
+@media screen and (max-width: 420px) {
     .left-border1 {
-        height: 10%;
+        position: fixed;
+        left: 48px;
+        height: 16%;
     }
 
     .left-border2 {
-        height: 16%;
+        position: fixed;
+        left: 27px;
+        height: 22%;
     }
 
     .Social-media {
         left: 42px;
-        top: 220px;
+        top: 360px;
 
         .social {
             width: 15px;

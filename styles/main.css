@@ -106,6 +106,53 @@ p {
   animation: fade-in 2s ease-in-out forwards;
 }
 
+/* Code général pour les sections */
+.section1Accueil {
+  display: flex;
+  margin-left: 150px;
+  /* Autres propriétés CSS */
+}
+@media screen and (max-width: 420px) {
+  .section1Accueil {
+    /* Code spécifique pour les smartphones */
+    flex-direction: column;
+    margin: 5% auto;
+  }
+  .section1Accueil .section1-text {
+    width: 100%;
+    margin-left: 12%;
+    margin-top: -1%;
+  }
+  .section1Accueil .section1-text h1 {
+    font-size: 30px;
+  }
+  .section1Accueil .section1-text h2 {
+    font-size: 22px;
+  }
+  .section1Accueil img {
+    width: 100%;
+    height: auto;
+    margin-top: 18px;
+    margin-left: 12%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .section1Accueil {
+    /* Code spécifique pour les tablettes */
+    flex-direction: column;
+    margin-left: 0;
+  }
+  .section1Accueil .section1-text {
+    width: 80%;
+    margin-top: 100px;
+  }
+  .section1Accueil img {
+    width: 80%;
+    height: auto;
+    margin-top: 18px;
+  }
+}
+
 /* Deuxième section */
 /**Design en général de la partie carousel côté HTML*/
 .section2Accueil {
@@ -249,6 +296,57 @@ p {
     display: block;
   }
 }
+/* Code général pour la conteneur .section2Accueil */
+.section2Accueil {
+  display: inline-flex;
+  background-color: #021740;
+  margin-left: 25%;
+  height: 230px;
+  animation: fade-in 5s ease-in-out forwards;
+  /* Code spécifique pour les smartphones */
+  /* Code spécifique pour les tablettes */
+}
+@media screen and (max-width: 420px) {
+  .section2Accueil {
+    flex-direction: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin-left: -60%;
+    background-color: #021740;
+  }
+  .section2Accueil .item {
+    display: block;
+  }
+  .section2Accueil .image img {
+    width: 150px;
+    height: 170px;
+  }
+  .section2Accueil .section2-text {
+    padding: 10px;
+    width: 100%;
+  }
+  .section2Accueil .section2-text h2 {
+    font-size: 14px;
+  }
+  .section2Accueil .section2-text p {
+    width: 100%;
+    font-size: 8px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .section2Accueil .section2-text {
+    width: 30%;
+  }
+  .section2Accueil .section2-text h2 {
+    font-size: 15px;
+  }
+  .section2Accueil .section2-text p {
+    width: 100%;
+    font-size: 9px;
+  }
+}
+
 /* Troisième section */
 .section3Accueil {
   display: flex;
@@ -316,6 +414,98 @@ p {
   color: rgba(0, 0, 0, 0.775);
 }
 
+/* Code général pour la conteneur .section3Accueil */
+.section3Accueil {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 120px;
+  animation: fade-in 2s ease-in-out forwards;
+  /* Code spécifique pour les smartphones */
+  /* Code spécifique pour les tablettes */
+}
+@media screen and (max-width: 420px) {
+  .section3Accueil {
+    flex-direction: column;
+    align-items: center;
+  }
+  .section3Accueil .section3-left,
+  .section3Accueil .section3-right {
+    margin: 5% 10%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .section3Accueil .section3-left {
+    margin-left: 50px;
+  }
+  .section3Accueil .section3-right {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+/* Code spécifique pour les smartphones */
+@media screen and (max-width: 420px) {
+  .section3-left h2 {
+    font-size: 16px;
+  }
+  .section3-left p {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .section3-right .image-BP {
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+  }
+  .section3-right .section3-biographie {
+    width: 80%;
+    height: auto;
+    padding-top: 100px;
+    margin-top: -80px;
+  }
+  .section3-right h2 {
+    font-size: 18px;
+  }
+  .section3-right .section3-items ul li,
+  .section3-right .section3-list ul li {
+    font-size: 8px;
+  }
+}
+/* Code spécifique pour les tablettes */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .section3-left {
+    margin-left: 50px;
+  }
+  .section3-left h2 {
+    font-size: 16px;
+  }
+  .section3-left p {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .section3-right {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .section3-right .image-BP {
+    width: 60%;
+    height: auto;
+    margin-left: 30px;
+  }
+  .section3-right .section3-biographie {
+    width: 60%;
+    height: auto;
+    padding-top: 100px;
+    margin-top: -80px;
+  }
+  .section3-right h2 {
+    font-size: 18px;
+  }
+  .section3-right .section3-items ul li,
+  .section3-right .section3-list ul li {
+    font-size: 10px;
+  }
+}
 /* Quatrième section */
 .section4Accueil {
   background-image: url(Illustrations/Accueil/Pantherhome7.png);
@@ -382,242 +572,18 @@ p {
   box-shadow: #021740 0 0 20px;
 }
 
-/* Popup Box après soumission du formulaire (avec un peu de JavaScript)*/
-.popupBox {
-  display: none;
-  justify-content: center;
-  position: absolute;
-  width: 80vw;
-  left: -35%;
-  padding: 220px 60px;
-  top: 0%;
-  background-color: rgba(61, 45, 166, 0.4196078431);
-  border-radius: 38px;
-  z-index: 2;
-}
-.popupBox h2 {
-  color: #FFFFFF;
-}
-
-/* Code général pour les sections */
-.section1Accueil {
-  display: flex;
-  margin-left: 150px;
-  /* Autres propriétés CSS */
-}
-@media screen and (max-width: 767px) {
-  .section1Accueil {
-    /* Code spécifique pour les smartphones */
-    flex-direction: column;
-    margin: center;
-  }
-  .section1Accueil .section1-text {
-    width: 100%;
-    margin-top: 40px;
-  }
-  .section1Accueil img {
-    width: 100%;
-    height: auto;
-    margin-top: 18px;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .section1Accueil {
-    /* Code spécifique pour les tablettes */
-    flex-direction: column;
-    margin-left: 0;
-  }
-  .section1Accueil .section1-text {
-    width: 80%;
-    margin-top: 100px;
-  }
-  .section1Accueil img {
-    width: 80%;
-    height: auto;
-    margin-top: 18px;
-  }
-}
-
-/* Code général pour la conteneur .section2Accueil */
-.section2Accueil {
-  display: inline-flex;
-  background-color: #021740;
-  margin-left: 25%;
-  height: 230px;
-  animation: fade-in 5s ease-in-out forwards;
-  /* Code spécifique pour les smartphones */
-  /* Code spécifique pour les tablettes */
-}
-@media screen and (max-width: 767px) {
-  .section2Accueil {
-    flex-direction: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 0;
-    height: auto;
-    padding: 20px;
-    background-color: #021740;
-  }
-  .section2Accueil #Carousel {
-    width: 100%;
-    flex-direction: flex;
-    justify-content: center;
-    align-items: center;
-    height: auto;
-  }
-  .section2Accueil .item {
-    display: block;
-    margin-left: 0;
-    text-align: center;
-    padding-bottom: 30px;
-  }
-  .section2Accueil .image img {
-    width: 150px;
-    height: 170px;
-  }
-  .section2Accueil .section2-text {
-    padding: 10px;
-    width: 100%;
-  }
-  .section2Accueil .section2-text h2 {
-    font-size: 14px;
-  }
-  .section2Accueil .section2-text p {
-    width: 100%;
-    font-size: 8px;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .section2Accueil .section2-text {
-    width: 30%;
-  }
-  .section2Accueil .section2-text h2 {
-    font-size: 15px;
-  }
-  .section2Accueil .section2-text p {
-    width: 100%;
-    font-size: 9px;
-  }
-}
-
-/* Code général pour la conteneur .section3Accueil */
-.section3Accueil {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 120px;
-  animation: fade-in 2s ease-in-out forwards;
-  /* Code spécifique pour les smartphones */
-  /* Code spécifique pour les tablettes */
-}
-@media screen and (max-width: 767px) {
-  .section3Accueil {
-    flex-direction: column;
-    align-items: center;
-  }
-  .section3Accueil .section3-left,
-  .section3Accueil .section3-right {
-    margin-left: 100px;
-    margin-right: 0;
-    text-align: center;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .section3Accueil .section3-left {
-    margin-left: 50px;
-  }
-  .section3Accueil .section3-right {
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-}
-
-/* Code spécifique pour les smartphones */
-@media screen and (max-width: 767px) {
-  .section3-left {
-    margin-left: 0;
-  }
-  .section3-left h2 {
-    font-size: 16px;
-  }
-  .section3-left p {
-    width: 80%;
-    margin: 0 auto;
-  }
-  .section3-right {
-    margin-left: 0;
-    margin-right: 0;
-  }
-  .section3-right .image-BP {
-    width: 70%;
-    height: auto;
-    margin: 0 auto;
-  }
-  .section3-right .section3-biographie {
-    width: 80%;
-    height: auto;
-    padding-top: 100px;
-    margin-top: -80px;
-  }
-  .section3-right h2 {
-    font-size: 18px;
-  }
-  .section3-right .section3-items ul li,
-  .section3-right .section3-list ul li {
-    font-size: 8px;
-  }
-}
-/* Code spécifique pour les tablettes */
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .section3-left {
-    margin-left: 50px;
-  }
-  .section3-left h2 {
-    font-size: 16px;
-  }
-  .section3-left p {
-    width: 90%;
-    margin: 0 auto;
-  }
-  .section3-right {
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-  .section3-right .image-BP {
-    width: 60%;
-    height: auto;
-    margin-left: 30px;
-  }
-  .section3-right .section3-biographie {
-    width: 60%;
-    height: auto;
-    padding-top: 100px;
-    margin-top: -80px;
-  }
-  .section3-right h2 {
-    font-size: 18px;
-  }
-  .section3-right .section3-items ul li,
-  .section3-right .section3-list ul li {
-    font-size: 10px;
-  }
-}
 /* Code général pour la conteneur .section4Accueil */
 .section4Accueil {
   background-image: url(Illustrations/Accueil/Pantherhome7.png);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 700px;
   /* Code spécifique pour les smartphones */
   /* Code spécifique pour les tablettes */
 }
-@media screen and (max-width: 767px) {
-  .section4Accueil {
-    height: auto;
-  }
+@media screen and (max-width: 420px) {
   .section4Accueil .form {
     width: 90%;
-    max-width: 400px;
-    margin: 100px auto;
+    margin: 5% auto;
     border-radius: 40px;
     padding: 20px;
   }
@@ -636,7 +602,7 @@ p {
 }
 
 /* Code spécifique pour les smartphones */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 420px) {
   .form {
     height: auto;
     padding-top: 5%;
@@ -651,7 +617,6 @@ p {
   .form .Label input[type=Email],
   .form .Label input[type=Message] {
     padding-right: 100px;
-    padding-left: 5px;
   }
   .form .Label input[type=Message] {
     padding-bottom: 80px;
@@ -662,11 +627,11 @@ p {
   .form *::placeholder {
     font-size: 10px;
   }
-  .form .submit {
+  .form #submit {
     width: 40%;
-    padding: 8px 20px;
-    font-size: 10px;
-    border-radius: 15px;
+    border-radius: 20px;
+    border: none;
+    font-size: 11px;
   }
 }
 /* Code spécifique pour les tablettes */
@@ -703,6 +668,23 @@ p {
     border-radius: 18px;
   }
 }
+/* Popup Box après soumission du formulaire (avec un peu de JavaScript)*/
+.popupBox {
+  display: none;
+  justify-content: center;
+  position: absolute;
+  width: 80vw;
+  left: -35%;
+  padding: 220px 60px;
+  top: 0%;
+  background-color: rgba(61, 45, 166, 0.4196078431);
+  border-radius: 38px;
+  z-index: 2;
+}
+.popupBox h2 {
+  color: #FFFFFF;
+}
+
 @font-face {
   font-family: "Panthera";
   src: url(../police/PantheraRegular-MVZ9J.ttf);
@@ -1324,26 +1306,20 @@ p {
   /* Code spécifique pour les smartphones */
   /* Code spécifique pour les tablettes */
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 420px) {
   .Header {
     flex-direction: column;
     align-items: center;
-    width: 90%;
+    width: 100%;
   }
   .Header .Logo {
-    width: 50%;
+    width: 100%;
     height: auto;
     margin-top: 10px;
   }
   .Header .Header-menu {
-    flex-direction: column;
-    align-items: center;
-    margin-top: 10px;
-  }
-  .Header .Header-menu li a {
-    padding-left: 0;
-    padding-right: 0;
-    margin-bottom: 5px;
+    margin-left: -20%;
+    margin-top: 5%;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -1559,7 +1535,7 @@ p {
   /* Code spécifique pour les smartphones */
   /* Code spécifique pour les tablettes */
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 420px) {
   #footer {
     height: auto;
     padding: 20px;
@@ -1569,7 +1545,8 @@ p {
     display: block;
     animation: none;
     filter: none;
-    margin-top: 30px;
+    margin-top: 30%;
+    margin-left: 8%;
   }
   #footer .footer1 {
     flex-direction: column;
@@ -1584,8 +1561,8 @@ p {
     margin-top: 20px;
   }
   #footer .footer1 .footer-pages {
-    margin-top: 30px;
-    margin-left: 0;
+    margin-top: -40%;
+    margin-left: 60%;
   }
   #footer .footer1 .footer-pages h4 {
     font-size: 14px;
@@ -1781,19 +1758,20 @@ p {
 }
 
 /* Code spécifique pour les smartphones */
-@media screen and (max-width: 767px) {
-  .left-border1 .left-border2 {
-    left: 60px;
-  }
+@media screen and (max-width: 420px) {
   .left-border1 {
-    height: 10%;
+    position: fixed;
+    left: 48px;
+    height: 16%;
   }
   .left-border2 {
-    height: 16%;
+    position: fixed;
+    left: 27px;
+    height: 22%;
   }
   .Social-media {
     left: 42px;
-    top: 220px;
+    top: 360px;
   }
   .Social-media .social {
     width: 15px;

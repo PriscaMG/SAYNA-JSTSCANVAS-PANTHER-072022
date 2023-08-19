@@ -54,27 +54,20 @@
     margin: 0 auto;
 
     /* Code spécifique pour les smartphones */
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 420px) {
         flex-direction: column;
         align-items: center;
-        width: 90%;
+        width: 100%;
 
         .Logo {
-            width: 50%;
+            width: 100%;
             height: auto;
             margin-top: 10px;
         }
 
         .Header-menu {
-            flex-direction: column;
-            align-items: center;
-            margin-top: 10px;
-
-            li a {
-                padding-left: 0;
-                padding-right: 0;
-                margin-bottom: 5px;
-            }
+            margin-left: -20%;
+            margin-top: 5%;
         }
     }
 
